@@ -1,6 +1,9 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: http://dep.debian.net/deps/dep5
+Upstream-Name: ca-certificates-catcert
+Upstream-Contact: Francesc Busquets <francesc@gmail.com>
+Source: https://github.com/projectestac/catcert-ca
 
 Files: *
-Copyright: 2014 Francesc Busquets <francesc@gmail.com>
+Copyright: 2014 Departament d'Ensenyament de la Generalitat de Catalunya
 License: Unlicense
 
