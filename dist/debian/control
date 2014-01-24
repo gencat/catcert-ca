@@ -1,0 +1,16 @@
+Source: ca-certificates-catcert
+Section: misc
+Priority: extra
+Maintainer: Francesc Busquets <francesc@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+
+Package: ca-certificates-catcert
+Architecture: all
+Depends: ca-certificates (>= 20130119), ${misc:Depends}
+Description: CA certificates from CATCert
+ This package includes CA certificates from the Catalan Agency of
+ Certification (http://catcert.cat) to be installed in
+ /usr/local/share/ca-certificates. The CA certificates installed by this
+ package will be implicitly trusted.
+

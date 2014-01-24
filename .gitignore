@@ -1,5 +1,18 @@
-CMakeCache.txt
-CMakeFiles
-Makefile
-cmake_install.cmake
-install_manifest.txt
+
+# Package Files and binary distributables #
+*.jar
+*.war
+*.ear
+*.exe
+*.zip
+*.gz
+
+# Back and log files #
+*.bak
+*~
+*.log
+
+# Build and doc directories #
+build/
+**/build/
+

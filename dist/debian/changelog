@@ -1,0 +1,5 @@
+ca-certificates-catcert (1.0.0a-1ppa1) precise; urgency=low
+
+  * Initial Release.
+
+ -- Francesc Busquets <francesc@gmail.com>  Fri, 24 Jan 2014 18:25:00 +0100
