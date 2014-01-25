@@ -11,6 +11,6 @@ Depends: ca-certificates (>= 20130119), ${misc:Depends}
 Description: CA certificates from CATCert
  This package includes CA certificates from the Catalan Agency of
  Certification (http://catcert.cat) to be installed in
- /usr/local/share/ca-certificates. The CA certificates installed by this
+ /usr/share/ca-certificates/catcert. The CA certificates installed by this
  package will be implicitly trusted.
 

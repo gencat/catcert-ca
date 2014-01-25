@@ -2,13 +2,13 @@
 # Makefile
 #
 
-LOCALCERTSDIR = /usr/local/share/ca-certificates
+CERTSDIR = /usr/share/ca-certificates/catcert
 
 all:
 
 clean:
 
 install:
-	mkdir -p $(DESTDIR)/$(LOCALCERTSDIR); \
-	$(MAKE) -C local install LOCALCERTSDIR=$(DESTDIR)/$(LOCALCERTSDIR)
+	mkdir -p $(DESTDIR)/$(CERTSDIR); \
+	$(MAKE) -C certs install CERTSDIR=$(DESTDIR)/$(CERTSDIR)
 
