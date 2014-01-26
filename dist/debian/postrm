@@ -4,14 +4,12 @@ set -e
 
 case "$1" in
     purge|remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
-        # Recreate the /usr/share/ca-certificates/catcert directory
-        # Removal of ca-certificates-catcert removes this directory if empty.
-        if [ ! -e /usr/share/ca-certificates/catcert ]; then
-            if mkdir /usr/share/ca-certificates/catcert 2>/dev/null; then
-                chown root:staff /usr/share/ca-certificates/catcert
-                chmod 2775 /usr/share/ca-certificates/catcert
-            fi
-        fi
+
+       # Delete entries in /etc/ca-certificates.conf
+       # and rebuild certificates
+       sed -i '/catcert\//d' /etc/ca-certificates.conf
+       update-ca-certificates
+
     ;;
 
     *)

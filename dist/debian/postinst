@@ -21,7 +21,10 @@ set -e
 case "$1" in
     configure)
 	# Add list of certificates in /etc/ca-certificates.conf
-	# .......
+	for cert in /usr/share/ca-certificates/catcert/*.crt;
+            do echo catcert/$(basename "$cert") >> /etc/ca-certificates.conf;
+        done
+        update-ca-certificates
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
