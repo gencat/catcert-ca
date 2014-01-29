@@ -6,10 +6,13 @@ case "$1" in
     purge|remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
 
        # Delete entries in /etc/ca-certificates.conf
-       # and rebuild certificates with "fresh" option
        sed -i '/catcert\//d' /etc/ca-certificates.conf
+       # Delete /etc/ssl/certs/java/cacerts file (will be regenerated in next step)
+       # This deletion is needed because update-ca-certificates don't removes
+       # obsolete elements, just adds new ones.
+       if [ -f /etc/ssl/certs/java/cacerts ]; then rm /etc/ssl/certs/java/cacerts; fi
+       # Rebuild certificates from zero (fresh build)
        update-ca-certificates -f
-
     ;;
 
     *)
